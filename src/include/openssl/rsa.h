@@ -229,6 +229,12 @@ OPENSSL_EXPORT int RSA_verify_raw(RSA *rsa, size_t *out_len, uint8_t *out,
                                   size_t max_out, const uint8_t *in,
                                   size_t in_len, int padding);
 
+OPENSSL_EXPORT int RSA_verify_PKCS1_PSS(RSA *rsa,
+       const unsigned char *mHash,
+       const EVP_MD *Hash,
+       const unsigned char *EM,
+       int sLen);
+
 /* RSA_private_encrypt encrypts |flen| bytes from |from| with the private key in
  * |rsa| and writes the encrypted data to |to|. The |to| buffer must have at
  * least |RSA_size| bytes of space. It returns the number of bytes written, or

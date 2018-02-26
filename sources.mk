@@ -188,6 +188,7 @@ crypto_sources := \
   src/crypto/rsa/blinding.c\
   src/crypto/rsa/padding.c\
   src/crypto/rsa/rsa.c\
+  src/crypto/rsa/rsa_pss.c\
   src/crypto/rsa/rsa_asn1.c\
   src/crypto/rsa/rsa_impl.c\
   src/crypto/sha/sha1.c\
